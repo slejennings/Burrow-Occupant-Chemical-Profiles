@@ -42,7 +42,7 @@ This repository contains an R project with various folders that are organized an
 
 ***Description:*** contains R scripts to process the data, to generate some of findings in the manuscript, to prepare data files for import into the PRIMER software program, and to create figures. The scripts are sequential and are labeled accordingly (Step1 through Step 6).
 
-***Contents:*** 6 files
+***Contents:*** 6 files. All .R
 
 1)	Soil_Step1.R
 
@@ -77,7 +77,7 @@ This repository contains an R project with various folders that are organized an
 
 ***Description:*** contains original datafiles used for the analysis, stored as .csv
 
-***Contents:*** 6 files
+***Contents:*** 6 files. All .csv
 
 1)	soilpeakarea.csv
 
@@ -86,8 +86,12 @@ This repository contains an R project with various folders that are organized an
     *Columns:*
 
      - File: unique identifier that contains multiple pieces of information. Bkgd indicates the sample came from the background (forest floor). Alternatively, Burr indicates the sample came from inside a burrow. The numbers that follow Bkgd or Burr (e.g., BurrXXX) denote the unique ID number associated with the marked burrow where the sample was collected. The information after the first underscore is the Site. The study area was divided into 3 seperate areas of marked storm-petrel burrows that are referred to as Sites (e.g., Site1, Site2, Site3). The final number after the second underscore is the replicate number (e.g., _1, _2, _3); as each sample was analyzed in triplicate, this number is either 1, 2 or 3.   
-     - RT: the retetion time when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer). Each retention time identifies a unique chemical.
-     - Area: peak area of each compound integrated from the chromatogram. The area of the peak reflects the abundance of the compound.
+
+
+  	 - RT: the retetion time when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer). Each retention time identifies a unique chemical.
+
+
+  	  - Area: peak area of each compound integrated from the chromatogram. The area of the peak reflects the abundance of the compound.
         
 
 3)	soilsampleinfo.csv
@@ -96,17 +100,39 @@ This repository contains an R project with various folders that are organized an
 
     *Columns:*
 
-     - File: unique identifier that contains multiple pieces of information. Bkgd indicates the sample came from the background (forest floor). Alternatively, Burr indicates the sample came from inside a burrow. The numbers that follow Bkgd or Burr (e.g., BurrXXX) denote the unique ID number associated with the marked burrow where the sample was collected. The information after the first underscore is the Site. The study area was divided into 3 seperate areas of marked storm-petrel burrows that are referred to as Sites (e.g., Site1, Site2, Site3). The final number after the second underscore is the replicate number (e.g., _1, _2, _3); as each sample was analyzed in triplicate, this number is either 1, 2 or 3.  
+     - File: unique identifier that contains multiple pieces of information. Bkgd indicates the sample came from the background (forest floor). Alternatively, Burr indicates the sample came from inside a burrow. The numbers that follow Bkgd or Burr (e.g., BurrXXX) denote the unique ID number associated with the marked burrow where the sample was collected. The information after the first underscore is the Site. The study area was divided into 3 seperate areas of marked storm-petrel burrows that are referred to as Sites (e.g., Site1, Site2, Site3). The final number after the second underscore is the replicate number (e.g., _1, _2, _3); as each sample was analyzed in triplicate, this number is either 1, 2 or 3.
+  
+       
      - Name:
-     - Type: Bkgd or Burr. Identifies if the sample was taken inside the burrow (Burr) or from the forest floor outside the burrow (Bkgd)
-     - Location: 
-     - Burrow: the unique ID number associated with the sampled burrow
-     - Site: Site1, Site2 or Site3. Marks the site within the larger study area where the sample was collected
-     - Feathers: Y or N. Denotes whether there is a feather sample(s) from occupant(s) of this burrow that will be used to examine the degree of overlap between the burrow and the bird
-     - Occupied: Y or N. Denotes whether the burrow was actively used by nesting birds during the study year
-     - Pair: Y or N. Indicates whether there are feather samples from both indivduals that occupied this burrow (aka a breeding pair)
+  
+       
+     - Type: Bkgd or Burr. Identifies if the sample was taken inside the burrow (Burr) or from the forest floor outside the burrow (Bkgd).
+  
+       
+     - Location:
+  
+       
+     - Burrow: the unique ID number associated with the sampled burrow.
+  
+       
+     - Site: Site1, Site2 or Site3. Marks the site within the larger study area where the sample was collected.
+  
+       
+     - Feathers: Y or N. Denotes whether there is a feather sample(s) from occupant(s) of this burrow that will be used to examine the degree of overlap between the burrow and the bird.
+  
+       
+     - Occupied: Y or N. Denotes whether the burrow was actively used by nesting birds during the study year.
+  
+       
+     - Pair: Y or N. Indicates whether there are feather samples from both indivduals that occupied this burrow (aka a breeding pair).
+  
+       
      - IS_Area: the peak area of the internal standard compounds that was added to each sample (0.5mL of 25 mg/L d8-naphthalene in 100% ethanol).
+  
+       
      - Wet_Soil_Mass: mass of the sample that was used for chemical analysis in grams. Scent compounds were extracted from the headspace above soil samples that were thawed from frozen but still moist/wet. This measurement reflects the mass of the sample immediately prior to starting the extraction process.
+  
+       
      - WaterPercentage: the percentage of water in soil at each location. This value was determined by drying approximately 2 grams of soil in an oven for 24 hours, and comparing the initial (wet) mass with the resulting dry mass to obtain the percentage of the original sample that was water and had evaporated during the drying process.
 
 4)	featherpeakarea.csv
@@ -116,8 +142,14 @@ This repository contains an R project with various folders that are organized an
     *Columns:*
   	
     - File: unique identifier that contains multiple pieces of information. The first 12 numbers (e.g., XXXX-XXXXX) are taken from the bird's metal ID band. The number that comes after the underscore (e.g., _1, _2, _3) is the replicate number; as each sample was analyzed in triplicate, this number is either 1, 2 or 3.
+  
+      
     - Band_Number: 12-digit unique ID on the metal band placed on each bird.
+  
+      
     - RT: the retetion time when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer). Each retention time identifies a unique chemical.
+  
+      
      - Area: peak area of each compound integrated from the chromatogram. The area of the peak reflects the abundance of the compound.
 
 5)	feathersampleinfo.csv
@@ -127,23 +159,40 @@ This repository contains an R project with various folders that are organized an
     *Columns:*
   	
   	- File: unique identifier that contains multiple pieces of information. The first 12 numbers (e.g., XXXX-XXXXX) are taken from the bird's metal ID band. The number that comes after the underscore (e.g., _1, _2, _3) is the replicate number; as each sample was analyzed in triplicate, this number is either 1, 2 or 3.
-    - Band_Number: 12-digit unique ID on the metal band placed on each bird.
-    - Burrow: the unique ID number of the burrow each bird occupied during the sampling year
-    - Pair: Y or N. Denotes whether this individual is part of a breeding pair where feather samples were analyzed for both individuals.
-    - BurrowOverlap: Y or N. Indicates whether the individual came from a burrow that had soil collected and analyzed.
-    - IS_Area: the peak area of the internal standard compounds that was added to each sample (0.5mL of 10 mg/L d8-naphthalene in 100% ethanol).
-    - Sample_Mass: mass of the sample that was used for chemical analysis in grams
 
-6)	Filename: burrow_coordinates.csv
+    - Band_Number: 12-digit unique ID on the metal band placed on each bird.
+  
+      
+    - Burrow: the unique ID number of the burrow each bird occupied during the sampling year.
+  
+      
+    - Pair: Y or N. Denotes whether this individual is part of a breeding pair where feather samples were analyzed for both individuals.
+  
+
+    - BurrowOverlap: Y or N. Indicates whether the individual came from a burrow that had soil collected and analyzed.
+  
+      
+    - IS_Area: the peak area of the internal standard compounds that was added to each sample (0.5mL of 10 mg/L d8-naphthalene in 100% ethanol).
+  
+      
+    - Sample_Mass: mass of the sample that was used for chemical analysis in grams.
+
+5)	Filename: burrow_coordinates.csv
 
     *File description:* geographic coordinates associated with each burrow (sampling location)
 
     *Columns:*
   	
-     - Burrow: the unique ID number associated with the burrow
-     - Site: Site1, Site2 or Site3. Denotes the site within the larger study area where the burrow is located
-     - longitude: geographic longitude coordinate for the burrow's location in decimal degrees
-     - latitude: geographic latitude coordinate for the burrow's location in decimal degrees
+     - Burrow: the unique ID number associated with the burrow.
+  
+       
+     - Site: Site1, Site2 or Site3. Denotes the site within the larger study area where the burrow is located.
+  
+       
+     - longitude: geographic longitude coordinate for the burrow's location in decimal degrees.
+  
+       
+     - latitude: geographic latitude coordinate for the burrow's location in decimal degrees.
 
 ### **PRIMER Folder**
 
@@ -151,14 +200,14 @@ This repository contains an R project with various folders that are organized an
 
 ***Description:*** data frames created in R and exported as .xlxs that were imported into PRIMER, a multivariate software program, where certain analyses were performed
 
-***Contents:*** 10 files (all .xlsx)
+***Contents:*** 10 files. All .xlsx
 
 
 **Subfolder 2: Exported Results**
 
 ***Description:*** the results of each model performed in PRIMER was exported and saved as .rtf to provide transparency about these findings beyond the values reported in the manuscript. Some additional results were also exported from the PRIMER as .xlsx files to allow for creation of figures in R. This included the scores (aka the x and y coordinates) of the samples identified by multivariate oridination methods in PRIMER, and the correlations between odor chemicals and the axes identified by multivariate models.
 
-***Contents:*** 10 files that are saved as either .xlsx or .rtf
+***Contents:*** 10 files. Saved as either .xlsx or .rtf
 
 
 -------------------------
@@ -168,13 +217,13 @@ None of the other folders and files are required to reproduce our analysis. All 
 
 ***Description:*** contains various files stored as .rds that contain organized data frames that were generated within the R scripts that are being moved between R scripts and to be used in subsequent analysis steps.
 
-***Contents:*** 3 files
+***Contents:*** 3 files. All .rds
 
 ### **Models Folder**
 
 ***Description:*** contains various models produced by the R scripts stored as .rds files. These files can be imported into R and viewed to see the results of our analyses.
 
-***Contents:*** 5 files
+***Contents:*** 5 files. All .rds
 
 ### **Tables and Figures Folder**
 
