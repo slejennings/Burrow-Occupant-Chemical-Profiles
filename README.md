@@ -6,7 +6,7 @@ This repository contains data and code for the analyses in the manuscript “XXX
 
 ## **Correspondence**
 
-Please direct questions about the data, analysis, and results to:
+Please direct questions to:
 
 XXXXX
 
@@ -88,7 +88,7 @@ This repository contains an R project with various folders that are organized an
      - File: unique identifier that contains multiple pieces of information. Bkgd indicates the sample came from the background (forest floor). Alternatively, Burr indicates the sample came from inside a burrow. The numbers that follow Bkgd or Burr (e.g., BurrXXX) denote the unique ID number associated with the marked burrow where the sample was collected. The information after the first underscore is the Site. The study area was divided into 3 seperate areas of marked storm-petrel burrows that are referred to as Sites (e.g., Site1, Site2, Site3). The final number after the second underscore is the replicate number (e.g., _1, _2, _3); as each sample was analyzed in triplicate, this number is either 1, 2 or 3.   
 
 
-  	 - RT: the retetion time when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer). Each retention time identifies a unique chemical.
+  	 - RT: the time in minutes when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer). Each retention time identifies a unique chemical.
 
 
   	  - Area: peak area of each compound integrated from the chromatogram. The area of the peak reflects the abundance of the compound.
@@ -127,7 +127,7 @@ This repository contains an R project with various folders that are organized an
      - Pair: Y or N. Indicates whether there are feather samples from both indivduals that occupied this burrow (aka a breeding pair).
   
        
-     - IS_Area: the peak area of the internal standard compounds that was added to each sample (0.5mL of 25 mg/L d8-naphthalene in 100% ethanol).
+     - IS_Area: the peak area of the internal standard compound that was added to each sample (for soil samples this compound was 0.5mL of 25 mg/L d8-naphthalene in 100% ethanol).
   
        
      - Wet_Soil_Mass: mass of the sample that was used for chemical analysis in grams. Scent compounds were extracted from the headspace above soil samples that were thawed from frozen but still moist/wet. This measurement reflects the mass of the sample immediately prior to starting the extraction process.
@@ -147,10 +147,11 @@ This repository contains an R project with various folders that are organized an
     - Band_Number: 12-digit unique ID on the metal band placed on each bird.
   
       
-    - RT: the retetion time when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer). Each retention time identifies a unique chemical.
+    - RT: the time in minutes when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer). Each retention time identifies a unique chemical.
   
       
      - Area: peak area of each compound integrated from the chromatogram. The area of the peak reflects the abundance of the compound.
+
 
 5)	feathersampleinfo.csv
    
@@ -172,10 +173,11 @@ This repository contains an R project with various folders that are organized an
     - BurrowOverlap: Y or N. Indicates whether the individual came from a burrow that had soil collected and analyzed.
   
       
-    - IS_Area: the peak area of the internal standard compounds that was added to each sample (0.5mL of 10 mg/L d8-naphthalene in 100% ethanol).
+    - IS_Area: the peak area of the internal standard compound that was added to each sample (for soil samples this compound was 0.5mL of 10 mg/L d8-naphthalene in 100% ethanol).
   
       
     - Sample_Mass: mass of the sample that was used for chemical analysis in grams.
+
 
 5)	Filename: burrow_coordinates.csv
 
@@ -193,6 +195,27 @@ This repository contains an R project with various folders that are organized an
   
        
      - latitude: geographic latitude coordinate for the burrow's location in decimal degrees.
+       
+  
+6)	Filename: feathercompoundlist.csv
+
+    *File description:* list of 155 compounds detected in feather samples
+
+    *Columns:*
+
+      - FeatherRT: the time in minutes when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer) in the feather samples. Each retention time identifies a unique chemical. While the same instrument and analysis program were used for both soil and feather samples, we needed to trim a small amount of the front end of the GC column as part of regular maintenance that occurred in between analyzing the two types of samples. This resulted in slight differences retention times between the two sample types such that the same chemical has a slightly earlier retention time in the soil data compared with the feather data. This column along with the SoilRT column help align the two types of data.
+  
+        
+      - Compound_Name: the name of the chemical compound obtained through matching the retention time and mass spectra of the detected compound with mass spectral reference libraries.
+  
+        
+      - Type: Bird, Plant or  Contaminant. Compounds were classified into three groups based on the most likely source of the chemical. These groups were used for analyses.
+  
+        
+      - In_Burrow: Y or N. Indicates whether the compound was also detected in the burrow soil sample, and is therefore common to both sample types.
+        
+        
+      - SoilRT: the time in minutes when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer) in the soil samples. Each retention time identifies a unique chemical. While the same instrument and analysis program were used for both soil and feather samples, we needed to trim a small amount of the front end of the GC column as part of regular maintenance that occurred in between analyzing the two types of samples. This resulted in slight differences retention times between the two sample types such that the same chemical has a slightly earlier retention time in the soil data compared with the feather data. This column along with the FeatherRT column help align the two types of data.
 
 ### **PRIMER Folder**
 
