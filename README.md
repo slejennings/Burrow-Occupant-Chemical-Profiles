@@ -260,12 +260,113 @@ The R scripts are numbered in Steps (1 through 6) as part of their filename. The
 
 ***Contents:*** 10 files. All .xlsx
 
+1) AveStdPA_All.xlsx
+ 
+      *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of all compounds in all soil samples (burrow and background).
+   
+2) AveStdPA_bkgd.xlsx
+
+     *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of all compounds in background soil samples.
+   
+3) AveStdPA_burr.xlsx
+
+    *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of all compounds in burrow soil samples.
+   
+4) burrowdistancematrix.xlsx
+
+    *File description:* matrix of pairwise distances between sampled burrows. Distances are in meters.
+
+5) Occburrows_elevbirdcomps.xlsx
+ 
+   *File description:* the coordinates (scores) of each soil sample on the CAP1 and CAP2 axes that were created by the CAP model for Class. Used to create an ordination plot in R to visualize differences between samples.
+
+6) Pairs_AllBirdComps.xlsx
+ 
+   *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of all bird-derived compounds on feather samples of mated pairs.
+
+7) Pairs_AllComps.xlsx
+
+   *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of all compounds on feather samples of mated pairs.
+
+8) Pairs_Contaminants.xlsx
+
+   *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of synthetic contaminant compounds on feather samples of mated pairs.
+
+9) Pairs_ElevBirdComps.xlsx
+
+    *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of 6 elevated storm-petrel compounds on feather samples of mated pairs.
+
+10) Pairs_PlantComps.xlsx
+
+    *File description:* file for import into PRIMER. Contains abundances (standardized and averaged peak areas) of plant-derived compounds on feather samples of mated pairs.
+
+
 
 **Subfolder 2: Exported Results**
 
 ***Description:*** the results of each model performed in PRIMER was exported and saved as .rtf to provide transparency about these findings beyond the values reported in the manuscript. Some additional results were also exported from the PRIMER as .xlsx files to allow for creation of figures in R. This included the scores (aka the x and y coordinates) of the samples identified by multivariate oridination methods in PRIMER, and the correlations between odor chemicals and the axes identified by multivariate models.
 
-***Contents:*** 10 files. Saved as either .xlsx or .rtf
+***Contents:*** 15 files. Saved as either .xlsx or .rtf
+
+1) BVSTEP Bkgd Compounds.rft
+ 
+      *File description:* output from PRIMER of BVSTEP model using background soil samples
+   
+2) BVSTEP Burrow Compounds.rtf
+
+     *File description:* output from PRIMER of BVSTEP model using burrow soil samples
+   
+3) CAP for Site.rtf
+
+    *File description:* output from PRIMER of Canonical Analysis of Principal Coordinates (CAP) model testing for differences between Sites of soil samples
+   
+4) CAP for Class.rft
+
+    *File description:* output from PRIMER of Canonical Analysis of Principal Coordinates (CAP) model testing for differences between Classes of soil samples
+
+5) CAP Scores Class.xlsx
+ 
+   *File description:* the coordinates (scores) of each soil sample on the CAP1 and CAP2 axes that were created by the CAP model for Class. Used to create an ordination plot in R to visualize differences between samples.
+
+6) CAP Scores Site.xlsx
+ 
+   *File description:* the coordinates (scores) of each sample on the CAP1 and CAP2 axes that were created by the CAP model for Site. Used to create an ordination plot in R to visualize differences between samples.
+
+7) Class CAP Axes Compound Correlations.xlsx
+
+   *File description:* correlation scores between the soil chemicals and the CAP model axes (CAP1 and CAP2) created by the CAP model for Class
+
+8) Site CAP Axes Compound Correlations.xlsx
+
+   *File description:* correlation scores between the soil chemicals and the CAP model axes (CAP1 and CAP2) created by the CAP model for Site
+
+9) Permanova Occupied Burrows Elevated Bird Compounds.rtf
+
+    *File description:* output from PRIMER of PERMANOVA model testing for differences between soil chemical profiles of occupied burrows using the 6 chemicals derived from storm-petrels that were elevated in the occupied burrows
+
+10) Permanova Pairs All Bird Compounds.rtf
+
+    *File description:* output from PRIMER of PERMANOVA model testing for differences between feather chemical profiles of mated pairs using all bird-derived compounds
+
+11) Permanova Pairs All Compounds.rtf
+
+    *File description:* output from PRIMER of PERMANOVA model testing for differences between feather chemical profiles of mated pairs using all compounds
+
+12) Permanova Pairs Contaminants.rtf
+
+    *File description:* output from PRIMER of PERMANOVA model testing for differences between feather chemical profiles of mated pairs using compounds identified as synthetic contaminants
+
+13) Permanova Pairs Elevated Bird Compounds.rtf
+
+    *File description:* output from PRIMER of PERMANOVA model testing for differences between feather chemical profiles of mated pairs using 6 storm-petrel compounds that were elevated inside occupied burrows
+
+14) Permanova Pairs Plant Compounds.rtf
+
+    *File description:* output from PRIMER of PERMANOVA model testing for differences between feather chemical profiles of mated pairs using compounds identified as plant-derived
+
+15) Permanova Site and Class.rtf
+
+    *File description:* output from PRIMER of PERMANOVA model testing for the importance of Site and Sample Class in the soil samples chemical profiles
 
 
 -------------------------
