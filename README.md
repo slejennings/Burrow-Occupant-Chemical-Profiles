@@ -45,6 +45,7 @@ RStudio IDE version 2024.12.0+467
 
 R packages with version number:
 broom (1.0.6),
+colorspace (2.1-1),
 ecodist (2.3.1),
 geodist (0.0.8),
 here (1.0.1),
