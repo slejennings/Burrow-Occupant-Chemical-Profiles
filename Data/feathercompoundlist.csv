@@ -1,0 +1,156 @@
+FeatherRT,Compound_Name,Type,In_Burrow,SoilRT
+RT10.02,Benzaldehyde,Bird,Y,RT9.96
+RT10.50,(-) Beta-Pinene,Plant,Y,RT10.44
+RT10.83,"5-Hepten-6-one, 2-methyl",Bird,N,NA
+RT11.02,2-Octanone,Bird,N,NA
+RT11.45,Octanal,Bird,Y,RT11.37
+RT11.50,3-Carene,Plant,Y,RT11.47
+RT11.84,4-Cyanocyclohexene (2-methyl-2-bornene?),Plant,Y,RT11.77
+RT12.04,o-Cymene,Plant,Y,RT11.98
+RT12.19,Limonene,Plant,Y,RT12.16
+RT12.26,"1-Hexanol, 2-ethyl",Bird,N,NA
+RT12.35,"Octane 6-ethyl, 2-methyl",Bird,N,NA
+RT12.64,Benzeneacetaldehyde,Bird,N,NA
+RT13.12,Gamma-Terpinene,Plant,Y,RT13.05
+RT13.26,"Octane, 1-chloro",Contaminant,N,NA
+RT13.33,Acetophenone,Bird,N,NA
+RT14.19,2-Nonanone,Bird,Y,RT14.12
+RT14.62,Nonanal,Bird,Y,RT14.61
+RT15.63,E-Pinocarveol,Plant,Y,RT15.64
+RT16.24,Pinocarvone,Plant,Y,RT16.20
+RT16.30,1-(1-tert-Butoxypropan-2-yloxy)propan-2-ol,Contaminant,N,NA
+RT16.55,Endo-borneol,Plant,Y,RT16.52
+RT17.21,2-Decanone,Bird,Y,RT17.14
+RT17.27,Alpha Terpineol,Plant,Y,RT17.20
+RT17.49,Dodecane,Bird,Y,RT17.43
+RT17.63,Decanal,Bird,Y,RT17.56
+RT18.81,"1,3-Di-tert-butylbenzene",Contaminant,N,NA
+RT19.83,L-Bornyl acetate,Plant,Y,RT19.73
+RT19.99,3-tert-Butylphenol,Contaminant,Y,RT19.95
+RT20.06,2-Undecanone,Bird,Y,RT19.99
+RT20.31,Tridecane,Bird,Y,RT20.23
+RT20.47,Undecanal,Bird,Y,RT20.41
+RT21.18,Unid 88/115_1,Bird,N,NA
+RT21.50,Unid_97,Bird,N,NA
+RT21.58,Alpha-Longipinene,Plant,Y,RT21.49
+RT22.14,Texanol,Contaminant,N,NA
+RT22.66,(+) Satvien,Plant,Y,RT22.63
+RT22.73,Unid_58,Bird,N,NA
+RT22.87,terpene 123,Plant,Y,RT22.83
+RT22.92,Unid 88/115_2,Bird,N,NA
+RT22.97,Tetradecane,Bird,Y,RT22.88
+RT23.10,Longifolene,Plant,Y,RT23.08
+RT23.16,Dodecanal,Bird,N,NA
+RT23.28,Unid Sesquiterpene_1,Plant,N,NA
+RT23.39,Beta-Cedrene,Plant,N,NA
+RT23.75,"Decanoic acid, ethyl ester",Bird,N,NA
+RT23.76,cis-Thujopsene,Plant,Y,RT23.67
+RT23.83,"Piceol (Acetophenone, 4-hydroyx)",Plant,Y,RT23.76
+RT24.10,Beta-Barbatene,Plant,Y,RT24.03
+RT24.11,Geranylacetone,Bird,N,NA
+RT24.25,Unid_71/112,Bird,N,NA
+RT24.54,"Spiro[4,5]dec-7-ene",Plant,Y,RT24.50
+RT24.71,1-Chloroundecane,Contaminant,N,NA
+RT25.07,Unid 88/115_2,Bird,N,NA
+RT25.16,Cubenene,Plant,Y,RT25.10
+RT25.34,"4,11- Selinadiene",Plant,Y,RT25.20
+RT25.36,Alpha-Muurolene,Plant,Y,RT25.28
+RT25.47,Pentadecane,Bird,Y,RT25.39
+RT25.52,"Pentanoic acid, 5-hydroxy, 2,4-di-t-butylphenyl esters",Contaminant,N,NA
+RT25.55,Alpha-Chamigrene,Plant,Y,RT25.45
+RT25.60,Beta-Bisabolene,Plant,Y,RT25.52
+RT25.66,Napthalene 161,Plant,Y,RT25.62
+RT25.70,Tridecanal,Bird,N,NA
+RT25.84,Delta-Cadinene,Plant,Y,RT25.77
+RT25.90,cis-Calamenene,Plant,Y,RT25.81
+RT26.18,Unid 88/115_3,Bird,N,NA
+RT26.19,"Benzene, (1-butylhexyl)",Contaminant,N,NA
+RT26.32,Alpha-calacorene,Plant,Y,RT26.28
+RT26.38,Trans -Alpha-Bisabolene,Plant,Y,RT26.30
+RT26.42,"Benzene, (1-propylheptyl)-",Contaminant,Y,RT26.33
+RT26.54,Delta-Cuprenene,Plant,Y,RT26.42
+RT26.87,"Benzene, (1-ethyloctyl)",Contaminant,Y,RT26.78
+RT27.27,Unid 88/115_4,Bird,N,NA
+RT27.48,Txib,Contaminant,Y,RT27.41
+RT27.67,"Dodecanoic acid, ethyl ester",Bird,N,NA
+RT27.75,"Benzene, (1-methylnonyl)",Contaminant,Y,RT27.67
+RT27.85,Hexadecane,Bird,Y,RT27.77
+RT28.10,Tetradecanal,Bird,Y,RT28.02
+RT28.41,"Benzene, (1-pentylhexyl)",Contaminant,Y,RT28.32
+RT28.49,"Benzene, (1-butylheptyl)",Contaminant,Y,RT28.41
+RT28.72,"Benzene, (1-propyloctyl)",Contaminant,Y,RT28.64
+RT28.98,Terpene,Plant,N,NA
+RT29.21,"Benzene, (1-ethylnonyl)",Contaminant,Y,RT29.13
+RT29.33,Unid Sesquiterpene_3,Plant,N,NA
+RT29.39,Unid_195_1,Contaminant,N,NA
+RT29.75,Alpha-Bisabolol,Plant,N,NA
+RT30.00,2-Pentadecanone,Bird,N,NA
+RT30.06,"Benzene, (1-methyldecyl)",Contaminant,Y,RT29.98
+RT30.10,Heptadecane,Bird,Y,RT30.02
+RT30.19,Pristane,Bird,Y,RT30.11
+RT30.27,Unid Sesquiterpene_4,Plant,N,NA
+RT30.39,Pentadecanal,Bird,Y,RT30.30
+RT30.59,"Benzene, (1-pentylheptyl)-",Contaminant,Y,RT30.51
+RT30.69,"Benzene, (1-butyloctyl)",Contaminant,Y,RT30.61
+RT30.96,"Benzene, (1-propylnonyl)",Contaminant,Y,RT30.88
+RT31.44,"Benzene, (1-ethyldecyl)",Contaminant,Y,RT31.36
+RT31.72,Dicumene,Plant,N,NA
+RT32.07,"Tetradecanoic acid, ethyl ester",Bird,N,NA
+RT32.19,2-Ethylhexyl Salicylate,Contaminant,Y,RT32.12
+RT32.24,Octadecane,Bird,Y,RT32.16
+RT32.28,"Benzene, (1-methylundecyl)",Contaminant,Y,RT32.19
+RT32.55,Hexadecanal,Bird,Y,RT32.47
+RT32.69,Benzene (1-pentyloctyl),Contaminant,N,NA
+RT32.82,Benzene (1-butylnonyl),Contaminant,N,NA
+RT33.74,Unid_134,Contaminant,N,NA
+RT33.87,Homosalate,Contaminant,Y,RT33.75
+RT34.26,2-Heptadecanone,Bird,Y,RT34.18
+RT34.28,Nonadecane,Bird,N,NA
+RT34.39,"Benzene, (1-methydodecyl)",Contaminant,Y,RT34.30
+RT34.50,LCE 1,Bird,N,NA
+RT34.62,Heptadecanal,Bird,N,NA
+RT35.14,LCE 2,Bird,N,NA
+RT35.19,Unid_70,Bird,N,NA
+RT35.54,LCE 3,Bird,N,NA
+RT36.02,LCE 4,Bird,N,NA
+RT36.08,"Hexadecanoic acid, ethyl ester",Bird,N,NA
+RT36.33,LCE 5,Bird,N,NA
+RT36.39,LCE 6,Bird,N,NA
+RT36.88,LCE 7,Bird,N,NA
+RT36.94,LCE 8,Bird,N,NA
+RT37.05,LCE 9,Bird,N,NA
+RT37.22,LCE 10,Bird,N,NA
+RT37.39,LCE 11,Bird,N,NA
+RT37.66,LCE 12,Bird,N,NA
+RT37.86,LCE 13,Bird,N,NA
+RT37.91,LCE 14,Bird,N,NA
+RT38.08,LCE 15,Bird,N,NA
+RT38.16,LCE 16,Bird,N,NA
+RT38.22,LCE 17,Bird,N,NA
+RT38.31,LCE 18,Bird,N,NA
+RT38.35,LCE 19,Bird,N,NA
+RT38.43,LCE 20,Bird,N,NA
+RT38.52,LCE 21,Bird,N,NA
+RT38.53,LCE 22,Bird,N,NA
+RT38.71,LCE 23,Bird,N,NA
+RT38.77,LCE 24,Bird,N,NA
+RT38.87,LCE 25,Bird,N,NA
+RT38.94,LCE 26,Bird,N,NA
+RT38.98,LCE 27,Bird,N,NA
+RT39.16,LCE 28,Bird,N,NA
+RT39.24,LCE 29,Bird,N,NA
+RT39.32,LCE 30,Bird,N,NA
+RT39.34,Fenretinide,Plant,Y,RT39.28
+RT39.42,LCE 31,Bird,N,NA
+RT39.54,LCE 32,Bird,N,NA
+RT39.73,LCE 33,Bird,N,NA
+RT39.86,LCE 34,Bird,N,NA
+RT40.02,LCE 35,Bird,N,NA
+RT40.08,LCE 36,Bird,N,NA
+RT5.39,Hexanal,Bird,Y,RT5.39
+RT6.20,Furfural,Bird,N,NA
+RT7.75,Styrene,Bird,Y,RT7.71
+RT8.23,Heptanal,Bird,Y,RT8.23
+RT9.10,Alpha-Pinene,Plant,Y,RT9.08
+RT9.59,Camphene,Plant,Y,RT9.65
+RT9.73,"2,4-Thujadiene",Plant,Y,RT9.71
