@@ -72,7 +72,7 @@ This repository contains an R project with various folders that are organized an
 
 ***Workflow***
 
-The R scripts are numbered in Steps (1 through 6) as part of their filename. They should be run in numerical order starting with Soil_Step1. R and ending with Feathers_Step6.R
+The R scripts are numbered in Steps (1 through 6), which is noted as part of their filename. They should be run in numerical order starting with Soil_Step1. R and ending with Feathers_Step6.R
 
 -------------------------
 ### **Scripts Folder**
