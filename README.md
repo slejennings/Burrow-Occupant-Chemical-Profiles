@@ -108,7 +108,7 @@ The R scripts are numbered in Steps (1 through 6), which is noted as part of the
 
 8)	Feathers_Step6.R
 
-    *File description:* compare chemical profiles of burrows (soil samples) and their avian occupants (feather samples) to determine whether there is evidence to suport a transfer of chemical fingerprints from the bird to the burrow and vice versa
+    *File description:* compare chemical profiles of burrows (soil samples) and their avian occupants (feather samples) to determine whether there is evidence to support a transfer of chemical fingerprints from the bird to the burrow and vice versa
 
 -------------------------
 ### **Data Folder**
