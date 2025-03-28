@@ -6,28 +6,36 @@ This repository contains data and code for the analyses in the manuscript “Bir
 The analyses are organized into an R Project. This Read Me file describes the required software and the organization of the R Project and the associated files.
 
 Author: XXXXX (removed for review)
+
 Other contributors: XXXXX (removed for review)
+
 Dataset title: Data and code for the article "Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird"
+
 Persistent Identifier: pending
+
 Date created: 03/28/2025
+
 Dataset citation: pending
+
 Corresponding pulication: pending
 
 ## **Correspondence**
 
-Please direct questions to:
+Please direct questions to: removed for review
  
-NOTE: removed for review
 Name:
+
 Affliations:
+
 ORCID ID:
+
 Email:
 
 ## **Metadata**
 
 Dates and Locations: fieldwork completed in June and July, 2015 on Bon Portage Island, Nova Scotia, Canada. Laboratory and data analyses conducted at the University of California, Davis, USA.
 
-Methodlogical information: provided in the corresponding manuscript
+Methodological information: provided in the corresponding manuscript
 
 ## **Software** 
 
@@ -58,10 +66,15 @@ In this R Project, the raw data files are manipulated and subseted to create the
 This repository contains an R project with various folders that are organized and named for their contents. A description of each folder and the files contained within each is provided below.
 
 ***Overview:***
-* Number of Folders:
-* Number of Files:
-* File formats:
+* Number of Folders: 8
+* Number of Files: 
+* File formats: .cvs, .xlsx, .R, .rtf, .png
 
+***Workflow***
+
+The R scripts are numbered in Steps (1 through 6) as part of their filename. They should be run in numerical order starting with Soil_Step1. R and ending with Feathers_Step6.R
+
+-------------------------
 ### **Scripts Folder**
 
 ***Description:*** contains R scripts to process the data, to generate some of findings in the manuscript, to prepare data files for import into the PRIMER software program, and to create figures. The scripts are sequential and are labeled accordingly (Step1 through Step 6).
@@ -96,7 +109,8 @@ This repository contains an R project with various folders that are organized an
 8)	Feathers_Step6.R
 
     *File description:* compare chemical profiles of burrows (soil samples) and their avian occupants (feather samples) to determine whether there is evidence to suport a transfer of chemical fingerprints from the bird to the burrow and vice versa
-  	
+
+-------------------------
 ### **Data Folder**
 
 ***Description:*** contains original datafiles used for the analysis, stored as .csv
@@ -125,21 +139,17 @@ This repository contains an R project with various folders that are organized an
     *Columns:*
 
      - File: unique identifier that contains multiple pieces of information. Bkgd indicates the sample came from the background (forest floor). Alternatively, Burr indicates the sample came from inside a burrow. The numbers that follow Bkgd or Burr (e.g., BurrXXX) denote the unique ID number associated with the marked burrow where the sample was collected. The information after the first underscore is the Site. The study area was divided into 3 seperate areas of marked storm-petrel burrows that are referred to as Sites (e.g., Site1, Site2, Site3). The final number after the second underscore is the replicate number (e.g., _1, _2, _3); as each sample was analyzed in triplicate, this number is either 1, 2 or 3.
-  
-       
-     - Name:
-  
        
      - Type: Bkgd or Burr. Identifies if the sample was taken inside the burrow (Burr) or from the forest floor outside the burrow (Bkgd).
   
        
-     - Location:
+     - Location: combines the columns Type (Bkgd or Burr) and Burrow (unique ID number for each sampled burrow)
   
        
      - Burrow: the unique ID number associated with the sampled burrow.
   
        
-     - Site: Site1, Site2 or Site3. Marks the site within the larger study area where the sample was collected.
+     - Site: Site1, Site2 or Site3. Marks the site within the larger study area where the sample was collected. See corresponding manuscript for a map.
   
        
      - Feathers: Y or N. Denotes whether there is a feather sample(s) from occupant(s) of this burrow that will be used to examine the degree of overlap between the burrow and the bird.
@@ -241,6 +251,7 @@ This repository contains an R project with various folders that are organized an
         
       - SoilRT: the time in minutes when the compound exited the GC (gas chromatograph) column and was detected by the MS (mass spectrometer) in the soil samples. Each retention time identifies a unique chemical. While the same instrument and analysis program were used for both soil and feather samples, we needed to trim a small amount of the front end of the GC column as part of regular maintenance that occurred in between analyzing the two types of samples. This resulted in slight differences retention times between the two sample types such that the same chemical has a slightly earlier retention time in the soil data compared with the feather data. This column along with the FeatherRT column help align the two types of data.
 
+-------------------------
 ### **PRIMER Folder**
 
 **Subfolder 1: Imported Files**
@@ -276,3 +287,4 @@ None of the other folders and files are required to reproduce our analysis. All 
 
 ***Description:*** contains versions of the tables and figures in the manuscript that were generated by the scripts in the R Project
 
+***Contents:*** X files. All .png
