@@ -68,7 +68,7 @@ This repository contains an R project with various folders that are organized an
 
 ***Overview:***
 * Number of Folders: 8
-* Number of Files: 
+* Number of Files: 51
 * File formats: .cvs, .xlsx, .R, .rtf, .png
 
 ***Workflow***
@@ -307,7 +307,7 @@ The R scripts are numbered in Steps (1 through 6), which is noted as part of the
 
 ***Description:*** the results of each model performed in PRIMER was exported and saved as .rtf to provide transparency about these findings beyond the values reported in the manuscript. Some additional results were also exported from the PRIMER as .xlsx files to allow for creation of figures in R. This included the scores (aka the x and y coordinates) of the samples identified by multivariate oridination methods in PRIMER, and the correlations between odor chemicals and the axes identified by multivariate models.
 
-***Contents:*** 15 files. Saved as either .xlsx or .rtf
+***Contents:*** 15 files. Saved as either .csv or .rtf
 
 1) BVSTEP Bkgd Compounds.rft
  
@@ -325,19 +325,19 @@ The R scripts are numbered in Steps (1 through 6), which is noted as part of the
 
     *File description:* output from PRIMER of Canonical Analysis of Principal Coordinates (CAP) model testing for differences between Classes of soil samples
 
-5) CAP Scores Class.xlsx
+5) CAP Scores Class.csv
  
    *File description:* the coordinates (scores) of each soil sample on the CAP1 and CAP2 axes that were created by the CAP model for Class. Used to create an ordination plot in R to visualize differences between samples.
 
-6) CAP Scores Site.xlsx
+6) CAP Scores Site.csv
  
    *File description:* the coordinates (scores) of each sample on the CAP1 and CAP2 axes that were created by the CAP model for Site. Used to create an ordination plot in R to visualize differences between samples.
 
-7) Class CAP Axes Compound Correlations.xlsx
+7) Class CAP Axes Compound Correlations.csv
 
    *File description:* correlation scores between the soil chemicals and the CAP model axes (CAP1 and CAP2) created by the CAP model for Class
 
-8) Site CAP Axes Compound Correlations.xlsx
+8) Site CAP Axes Compound Correlations.csv
 
    *File description:* correlation scores between the soil chemicals and the CAP model axes (CAP1 and CAP2) created by the CAP model for Site
 
@@ -383,7 +383,7 @@ None of the other folders and files are required to reproduce our analysis. All 
 
 ***Description:*** contains various models produced by the R scripts stored as .rds files. These files can be imported into R and viewed to see the results of our analyses.
 
-***Contents:*** 5 files. All .rds
+***Contents:*** 6 files. All .rds
 
 ### **Figures Folder**
 
