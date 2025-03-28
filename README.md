@@ -1,14 +1,33 @@
-# GitHub Repository Read Me: Burrow & Occupant Chemical Profiles
+# GitHub Repository Read Me: Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird
 
 ## **Overview**
 
-This repository contains data and code for the analyses in the manuscript “XXXXX”. The analyses are organized into an R Project. This Read Me file describes the required software and the organization of the R Project and the associated files.
+This repository contains data and code for the analyses in the manuscript “Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird”. 
+The analyses are organized into an R Project. This Read Me file describes the required software and the organization of the R Project and the associated files.
+
+Author: XXXXX (removed for review)
+Other contributors: XXXXX (removed for review)
+Dataset title: Data and code for the article "Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird"
+Persistent Identifier: pending
+Date created: 03/28/2025
+Dataset citation: pending
+Corresponding pulication: pending
 
 ## **Correspondence**
 
 Please direct questions to:
+ 
+NOTE: removed for review
+Name:
+Affliations:
+ORCID ID:
+Email:
 
-XXXXX
+## **Metadata**
+
+Dates and Locations: fieldwork completed in June and July, 2015 on Bon Portage Island, Nova Scotia, Canada. Laboratory and data analyses conducted at the University of California, Davis, USA.
+
+Methodlogical information: provided in the corresponding manuscript
 
 ## **Software** 
 
@@ -37,6 +56,11 @@ In this R Project, the raw data files are manipulated and subseted to create the
 ## **Description of Folders and Files**
 
 This repository contains an R project with various folders that are organized and named for their contents. A description of each folder and the files contained within each is provided below.
+
+***Overview:***
+* Number of Folders:
+* Number of Files:
+* File formats:
 
 ### **Scripts Folder**
 
