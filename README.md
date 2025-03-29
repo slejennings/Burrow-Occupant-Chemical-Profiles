@@ -33,7 +33,7 @@ Email:
 
 ## **Metadata**
 
-Dates and Locations: fieldwork completed in June and July, 2015 on Bon Portage Island, Nova Scotia, Canada. Laboratory and data analyses conducted at the University of California, Davis, USA.
+Dates and Locations: removed for review
 
 Methodological information: provided in the corresponding manuscript
 
