@@ -19,6 +19,9 @@ library(patchwork)
 # Import pairs data
 occupant <- readRDS(here("Outputs", "occupant.rds"))
 
+# Import compound list
+compounds <- read.csv(here("Data", "feathercompoundlist.csv"), header=T)
+
 ############# OCCUPANTS #################
 
 # reduce to 75 compounds that were also detected in burrow
@@ -176,6 +179,11 @@ procrustes_nmds_75 <- plot(procrustes(burr_75_nmds, occ_75_nmds, symmetric = TRU
 heads_75 <- data.frame(procrustes_nmds_75$heads) %>% rownames_to_column(., var="Burrow")
 points_75 <- data.frame(procrustes_nmds_75$points) %>% rownames_to_column(., var="Burrow")
 plotdat_75 <- left_join(heads_75, points_75)
+
+# set colors for plots
+# we need 22 colors for the 22 pairs
+colors22<-c("#ff7690","#61c100", "#8934e4", "#008525", "#201eb2", "#ee8a00", "#0158bf", "#9cb553", "#b800ba","#27c09b", "#ff2fbd",  
+            "#677100","#fa7ee1", "#6d3c00","#00aaf8","#b94600", "#263871", "#ba0033", "#df92cc", "#e09b77", "#5c255f", "#91516b")
 
 
 procrustes.plot_75 <- ggplot()+ 
@@ -646,3 +654,6 @@ procrustes.plot_2nd_plant + procrustes.plot_2nd_elevbird + plot_annotation(tag_l
 
 ggsave(filename = here("Figures", "Procrustes_PlantElevBird_Supplementary.png"), 
        width=8, height= 4, units="in", dpi=300, device="png")
+
+ggsave(filename = here("Figures", "Procrustes_PlantElevBird_Supplementary.svg"), 
+       width=8, height= 4, units="in", dpi=300, device="svg")
