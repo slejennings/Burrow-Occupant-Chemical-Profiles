@@ -313,7 +313,7 @@ NMDSplot_occburr_elevbird <- ggplot(scores_occburr_elevbird, aes(x=NMDS1, y=NMDS
 
 NMDSplot_occburr_elevbird # this Figure 3 in the corresponding manuscript
 
-ggsave(filename = here("Figures", "NMDSplot_occburr_elevbird"), 
+ggsave(filename = here("Figures", "NMDSplot_occburr_elevbird.png"), 
        width=7, height=5.5, units="in", dpi=300, device="png")
 
 # Finally, we can use PERMANOVA to determine if each occupied burrow has a distinct chemical profile using:

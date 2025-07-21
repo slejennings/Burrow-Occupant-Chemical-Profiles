@@ -125,6 +125,21 @@ saveRDS(burr_mantel, here("Models", "burrow_mantel.rds")) # save model
 # for the results of this analysis see: 
 # PRIMER/Exported Results/BVSTEP Bkgd Compounds.rtf and PRIMER/Exported Results/BVSTEP Burrow Compounds.rtf
 
+
+# perform a final Mantel test to examine the degree of covariance between the temporal and spatial aspects of the soil sampling
+
+# get the sampling dates
+dates <- burrowcoords %>%
+  arrange(Burrow) %>% # arrange by Burrow to ensure organization of final matrix is the same as the soil chemical matrices
+  column_to_rownames(var="Burrow") %>%
+  dplyr::select(Sampling_Day)
+
+datesdist <- dist(dates) # make a pairwise distance matrix using the sampling dates
+
+# run a Mantel test using the spatial burrow distance matrix (burrdist) and the temporal distance matrix
+set.seed(567)
+date_space <- vegan::mantel(xdis= datesdist, ydis= burrdist, permutations=9999)
+
 ###############################################################################################################
 ##### PERMANOVA and CAP to explore differences in chemical profiles based on colony site and sample type ######
 
@@ -195,7 +210,7 @@ CAPplot_Site + CAPplot_Class + plot_annotation(tag_levels="A") & theme(plot.tag 
 # this is Figure 2 in the corresponding manuscript
 
 # export plot
-ggsave(filename = here("Figures", "CAP_Site&Class"), 
+ggsave(filename = here("Figures", "CAP_Site&Class.png"), 
        width=8, height=4.5, units="in", dpi=300, device="png")
 
 
@@ -226,4 +241,5 @@ CAP1_site
 CAP2_site <- CAPcorr_site %>% filter(CAP2<=-0.5 | CAP2>=0.5) %>% 
   select(-CAP1)
 CAP2_site
+
 

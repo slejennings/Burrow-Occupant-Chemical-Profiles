@@ -138,6 +138,9 @@ feathers_combined <- feather_sampleinfo %>%
   distinct() %>%
   left_join(feathers_compounds, .)
 
+# export data frame for use in subsequent steps
+saveRDS(feathers_combined, here("Outputs", "feathers_combined.rds"))
+
 # confirm every bird has 155 compounds
 feathers_count <- feathers_combined %>% group_by(Band_Number) %>% count()
 print(feathers_count, n=56)
