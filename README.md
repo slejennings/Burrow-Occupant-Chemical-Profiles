@@ -5,9 +5,9 @@
 This repository contains data and code for the analyses in the manuscript “Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird”. 
 The analyses are organized into an R Project. This Read Me file describes the required software and the organization of the R Project and the associated files.
 
-Author: XXXXX (removed for review)
+Author: Sarah L. Jennings
 
-Other contributors: XXXXX (removed for review)
+Other contributors: Susan E. Ebeler, Gail L. Patricelli
 
 Dataset title: Data and code for the article "Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird"
 
@@ -17,19 +17,19 @@ Date created: 03/28/2025
 
 Dataset citation: pending
 
-Corresponding pulication: pending
+Corresponding publication: pending
 
 ## **Correspondence**
 
-Please direct questions to: removed for review
+Please direct questions to:
  
-Name:
+Name: Sarah L. Jennings, PhD
 
-Affliations:
+Affliations: California State Polytechnic University, San Luis Obispo
 
-ORCID ID:
+ORCID: 0000-0003-2995-8813
 
-Email:
+Email: sjenni02@calpoly.edu
 
 ## **Metadata**
 
@@ -60,6 +60,7 @@ writexl (1.4.2)
 
 PRIMER 7 with PERMANOVA+ (https://www.primer-e.com/software)
 This is a paid software program. It offers a wide range of methods for multivariate data and offers several advantages to the options that are currently available in free, open source analysis packages in R. One of the key differences is that the methods used in PRIMER to partition the variation in multivariate data are better able to handle unbalanced or complex designs compared with R, which is why we have opted to use it for this study. For more information see: https://learninghub.primer-e.com/books/should-i-use-primer-or-r
+
 In this R Project, the raw data files are manipulated and subsetted to create the files that were imported and analyzed within PRIMER. We also provide copies of the saved outputs of the analyses performed in PRIMER to increase transparency. A user who has access to the PRIMER software would be able to reproduce or confirm our findings with these files.
 
 ## **Description of Folders and Files**
@@ -78,7 +79,7 @@ The R scripts are numbered in Steps (1 through 6), which is noted as part of the
 -------------------------
 ### **Scripts Folder**
 
-***Description:*** contains R scripts to process the data, to generate some of findings in the manuscript, to prepare data files for import into the PRIMER software program, and to create figures. The scripts are sequential and are labeled accordingly (Step1 through Step 6).
+***Description:*** contains R scripts to process the data, to generate some of findings in the manuscript, to prepare data files for import into the PRIMER software program, and to create figures. The scripts are sequential and are labeled accordingly (Step 1 through Step 6).
 
 ***Contents:*** 6 files. All .R
 
@@ -230,6 +231,9 @@ The R scripts are numbered in Steps (1 through 6), which is noted as part of the
   
        
      - latitude: geographic latitude coordinate for the burrow's location in decimal degrees.
+
+  
+     - Sampling_Day: denotes the day of sampling for each burrow as 1 through 4.
        
   
 6)	Filename: feathercompoundlist.csv
