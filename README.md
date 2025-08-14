@@ -1,4 +1,4 @@
-# GitHub Repository Read Me: Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird
+# Read Me: Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird
 
 ## **Overview**
 
