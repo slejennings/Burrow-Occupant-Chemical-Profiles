@@ -33,11 +33,11 @@ head(StdPA_Soil)
 
 # put identifying info for each sample into a data frame
 Soil_ID <- StdPA_Soil %>% 
-  select(RT, Name, Type, Location, Burrow, Feathers, Occupied, Pair) %>% distinct()
+  select(RT, Type, Location, Burrow, Feathers, Occupied, Pair) %>% distinct()
 
 # find average standardized peak area for each compounds across triplicate samples
 AveStdPA_Soil <- StdPA_Soil %>% 
-  group_by(Name, RT) %>% 
+  group_by(Location, RT) %>% 
   summarize(Ave_StdPA = mean(Std_PA)) %>%
   left_join(., Soil_ID) # combine with identifying info
 
@@ -192,9 +192,9 @@ procrustes.plot_75 <- ggplot()+
   geom_segment(data = plotdat_75, aes(x=NMDS1, y=NMDS2, xend=X1, yend=X2, colour = factor(Burrow)), linewidth = 1, , alpha = 0.6)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank())+
@@ -203,7 +203,7 @@ procrustes.plot_75 <- ggplot()+
         panel.background = element_rect(fill = "white")) +
   xlim(-0.5,0.25) + ylim(-0.25, 0.25) +
   labs(title = "All compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11))
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial"))
 procrustes.plot_75
 
 
@@ -231,9 +231,9 @@ procrustes.plot_plant <- ggplot()+
   geom_segment(data = plotdat_plant, aes(x=NMDS1, y=NMDS2, xend=X1, yend=X2, colour = factor(Burrow)), linewidth = 1, alpha = 0.6)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank())+
@@ -241,7 +241,7 @@ procrustes.plot_plant <- ggplot()+
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth=1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Plant compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11))
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial"))
 procrustes.plot_plant
 
 
@@ -270,9 +270,9 @@ procrustes.plot_contaminant <- ggplot()+
   geom_segment(data = plotdat_contaminant, aes(x=NMDS1, y=NMDS2, xend=X1, yend=X2, colour = factor(Burrow)), linewidth = 1, alpha=0.6)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank())+
@@ -280,7 +280,7 @@ procrustes.plot_contaminant <- ggplot()+
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth=1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Contaminant compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11))
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial"))
 procrustes.plot_contaminant
 
 # all bird compounds
@@ -307,9 +307,9 @@ procrustes.plot_allbird <- ggplot()+
   geom_segment(data = plotdat_allbird, aes(x=NMDS1, y=NMDS2, xend=X1, yend=X2, colour = factor(Burrow)), linewidth = 1, alpha = 0.6)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank())+
@@ -317,7 +317,7 @@ procrustes.plot_allbird <- ggplot()+
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth=1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "All bird compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11))
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial"))
 procrustes.plot_allbird
 
 # elevated bird compounds
@@ -344,9 +344,9 @@ procrustes.plot_elevbird <- ggplot()+
   geom_segment(data = plotdat_elevbird, aes(x=NMDS1, y=NMDS2, xend=X1, yend=X2, colour = factor(Burrow)), linewidth = 1, alpha=0.6)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank())+
@@ -354,20 +354,24 @@ procrustes.plot_elevbird <- ggplot()+
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth=1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Bird compounds that were \n   elevated in occupied burrows") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11))
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial"))
 procrustes.plot_elevbird
 
 # combine plots for plant and elevated bird compounds
 # this is figure 4 in the corresponding manuscript
-procrustes.plot_plant + procrustes.plot_elevbird + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold'))
+procrustes.plot_plant + procrustes.plot_elevbird + 
+  plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold', family = "Arial"))
 
 ggsave(filename = here("Figures", "Procrustes_PlantElevBird.png"), 
        width=8, height= 4, units="in", dpi=300, device="png")
 
+ggsave(filename = here("Figures", "Figure4.pdf"), 
+       width=8, height= 4, units="in", dpi=300, device=cairo_pdf)
+
 # combine the remaining plots for the supplement
 procrustes.plot_75 + procrustes.plot_contaminant + procrustes.plot_allbird + 
   plot_layout(ncol=2) +
-  plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold'))
+  plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold', family = "Arial"))
 
 ggsave(filename = here("Figures", "Procrustes_All_Contaminant_AllBird.png"), 
        width=8, height= 6.75, units="in", dpi=300, device="png")
@@ -409,11 +413,11 @@ occupant_2nd_75 <- occupant_2nd %>% filter(In_Burrow == "Y") %>%
 # next, work to prepare the soil data
 # put the identifying info for each soil sample into a data frame
 Soil_ID <- StdPA_Soil %>% 
-  select(RT, Name, Type, Location, Burrow, Feathers, Occupied, Pair) %>% distinct()
+  select(RT, Type, Location, Burrow, Feathers, Occupied, Pair) %>% distinct()
 
 # find average standardized peak area for each compounds across triplicate samples
 AveStdPA_Soil <- StdPA_Soil %>% 
-  group_by(Name, RT) %>% 
+  group_by(Location, RT) %>% 
   summarize(Ave_StdPA = mean(Std_PA)) %>%
   left_join(., Soil_ID) # combine with identifying info
 
@@ -597,9 +601,9 @@ procrustes.plot_2nd_plant <- ggplot()+
   geom_segment(data = plotdat_2nd_plant, aes(x=NMDS1, y=NMDS2, xend=X1, yend=X2, colour = factor(Burrow)), linewidth = 1, alpha = 0.6)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors10)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank())+
@@ -607,7 +611,7 @@ procrustes.plot_2nd_plant <- ggplot()+
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth=1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Plant compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11))
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial"))
 procrustes.plot_2nd_plant
 
 
@@ -636,9 +640,9 @@ procrustes.plot_2nd_elevbird <- ggplot()+
   geom_segment(data = plotdat_2nd_elevbird, aes(x=NMDS1, y=NMDS2, xend=X1, yend=X2, colour = factor(Burrow)), linewidth = 1, alpha=0.6)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors10)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank())+
@@ -646,14 +650,12 @@ procrustes.plot_2nd_elevbird <- ggplot()+
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth=1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Bird compounds that were \n   elevated in occupied burrows") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11))
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial"))
 procrustes.plot_2nd_elevbird
 
 # combine plots for plant and elevated bird compounds into a single panel for supplementary materials
-procrustes.plot_2nd_plant + procrustes.plot_2nd_elevbird + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold'))
+procrustes.plot_2nd_plant + procrustes.plot_2nd_elevbird + 
+  plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold', family = "Arial"))
 
 ggsave(filename = here("Figures", "Procrustes_PlantElevBird_Supplementary.png"), 
        width=8, height= 4, units="in", dpi=300, device="png")
-
-ggsave(filename = here("Figures", "Procrustes_PlantElevBird_Supplementary.svg"), 
-       width=8, height= 4, units="in", dpi=300, device="svg")

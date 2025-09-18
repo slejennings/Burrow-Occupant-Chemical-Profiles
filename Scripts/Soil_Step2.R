@@ -307,7 +307,11 @@ NMDSplot_occburr_elevbird <- ggplot(scores_occburr_elevbird, aes(x=NMDS1, y=NMDS
   geom_point(aes(NMDS1, NMDS2, colour = factor(Burrow), shape=factor(Burrow)), size=2.5, stroke=1)+
   scale_shape_manual(values=rep(c(0,1,2,3,4,5,6,7,8,9,10),times=3))+
   scale_color_manual(values=colors30)+
-  theme(axis.title.x = element_text(size=12),axis.text.x  = element_blank(), axis.title.y = element_text( size=12), axis.text.y = element_blank(), axis.ticks=element_blank())+
+  theme(axis.title.x = element_text(size=12, family= "Arial"), 
+        axis.text.x  = element_blank(), 
+        axis.title.y = element_text( size=12, family="Arial"), 
+        axis.text.y = element_blank(), 
+        axis.ticks=element_blank())+
   theme(legend.position="none")+
   theme(panel.border = element_rect(fill=NA, colour = "black", linewidth=1, linetype = "solid"), panel.background = element_rect(fill="white"))
 
@@ -315,6 +319,9 @@ NMDSplot_occburr_elevbird # this Figure 3 in the corresponding manuscript
 
 ggsave(filename = here("Figures", "NMDSplot_occburr_elevbird.png"), 
        width=7, height=5.5, units="in", dpi=300, device="png")
+
+ggsave(filename = here("Figures", "Figure3.pdf"), 
+       width=7, height=5.5, units="in", device= cairo_pdf)
 
 # Finally, we can use PERMANOVA to determine if each occupied burrow has a distinct chemical profile using:
 # the compounds that are abundant on storm-petrel plumage

@@ -153,17 +153,17 @@ nmds.plot.allcomps <- ggplot(pairs_scores_allcomps, aes(x=NMDS1, y=NMDS2))+ # se
   geom_point(aes(NMDS1, NMDS2, colour = factor(Burrow), shape = factor(Burrow)), size = 2, stroke=1)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(), 
         axis.ticks=element_blank())+
   theme(legend.position="none") +
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth = 1 , linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "All compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size = 11)) +
-  annotate("text", x =-0.25, y =-0.2, label ="stress = 0.10" )
+  theme(plot.title = element_text(hjust = 0.5, size = 11, family = "Arial")) +
+  annotate("text", x =-0.25, y =-0.2, label ="stress = 0.10", family = "Arial" )
 
 nmds.plot.allcomps
 
@@ -171,17 +171,17 @@ nmds.plot.plant <- ggplot(pairs_scores_plant, aes(x=NMDS1, y=NMDS2))+ # sets up 
   geom_point(aes(NMDS1, NMDS2, colour = factor(Burrow), shape = factor(Burrow)), size = 2, stroke=1)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(), 
         axis.ticks=element_blank())+
   theme(legend.position="none") +
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth = 1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Plant compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size =11)) +
-  annotate("text", x =-0.6, y =-0.6, label ="stress = 0.14")
+  theme(plot.title = element_text(hjust = 0.5, size=11, family = "Arial")) +
+  annotate("text", x =-0.6, y =-0.6, label ="stress = 0.14", family = "Arial")
 
 nmds.plot.plant
 
@@ -189,17 +189,17 @@ nmds.plot.contaminant <- ggplot(pairs_scores_contaminant, aes(x=NMDS1, y=NMDS2))
   geom_point(aes(NMDS1, NMDS2, colour = factor(Burrow), shape = factor(Burrow)), size = 2, stroke= 1)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(), 
         axis.ticks=element_blank())+
   theme(legend.position="none") +
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth = 1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Contaminant compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size =11)) +
-  annotate("text", x =-0.2, y =-0.2, label ="stress = 0.10")
+  theme(plot.title = element_text(hjust = 0.5, size =11, family = "Arial")) +
+  annotate("text", x =-0.2, y =-0.2, label ="stress = 0.10", family = "Arial")
 
 nmds.plot.contaminant
 
@@ -207,17 +207,17 @@ nmds.plot.allbird <- ggplot(pairs_scores_allbird, aes(x=NMDS1, y=NMDS2))+ # sets
   geom_point(aes(NMDS1, NMDS2, colour = factor(Burrow), shape = factor(Burrow)), size = 2, stroke=1)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=11),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=11),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(), 
         axis.ticks=element_blank())+
   theme(legend.position="none") +
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth = 1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "All bird compounds") +
-  theme(plot.title = element_text(hjust = 0.5, size =11)) +
-  annotate("text", x =-0.29, y =-0.32, label ="stress = 0.07")
+  theme(plot.title = element_text(hjust = 0.5, size =11, family = "Arial")) +
+  annotate("text", x =-0.29, y =-0.32, label ="stress = 0.07", family = "Arial")
 
 nmds.plot.allbird
 
@@ -225,30 +225,33 @@ nmds.plot.elevbird <- ggplot(pairs_scores_elevbird, aes(x=NMDS1, y=NMDS2))+ # se
   geom_point(aes(NMDS1, NMDS2, colour = factor(Burrow), shape = factor(Burrow)), size = 2, stroke=1)+
   scale_shape_manual(values = rep(c(0,1,2,3,4,5,6,7,8,9,10), times=2))+
   scale_color_manual(values = colors22)+
-  theme(axis.title.x = element_text(size=12),
+  theme(axis.title.x = element_text(size=11, family = "Arial"),
         axis.text.x  = element_blank(), 
-        axis.title.y = element_text(size=12),
+        axis.title.y = element_text(size=11, family = "Arial"),
         axis.text.y = element_blank(), 
         axis.ticks=element_blank())+
   theme(legend.position="none") +
   theme(panel.border = element_rect(fill = NA, colour = "black", linewidth = 1, linetype = "solid"), 
         panel.background = element_rect(fill = "white")) +
   labs(title = "Bird compounds that were \n  elevated in occupied burrows") +
-  theme(plot.title = element_text(hjust = 0.5, size =11)) +
-  annotate("text", x =-0.1, y =-0.12, label ="stress = 0.09")
+  theme(plot.title = element_text(hjust = 0.5, size =11, family = "Arial")) +
+  annotate("text", x =-0.1, y =-0.12, label ="stress = 0.09", family = "Arial")
 
 nmds.plot.elevbird
 
 # combine plots. this is Figure 5 in the corresponding manuscript
-nmds.plot.plant + nmds.plot.elevbird + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold'))
+nmds.plot.plant + nmds.plot.elevbird + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold', family = "Arial"))
 
 ggsave(filename = here("Figures", "Pairs_nMDS_PlantElevBird.png"), 
        width=8.5, height= 3.75, units="in", dpi=300, device="png")
 
+ggsave(filename = here("Figures", "Figure5.pdf"), 
+       width=8.5, height= 3.75, units="in", dpi=300, device=cairo_pdf)
+
 # combine other plots for supplement
 nmds.plot.allcomps + nmds.plot.contaminant + nmds.plot.allbird + 
   plot_layout(ncol=2) +
-  plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold'))
+  plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = 'bold', family="Arial"))
 
 ggsave(filename = here("Figures", "Pairs_nMDS_All_Bird_Contaminants.png"), 
        width=8.5, height= 6.5, units="in", dpi=300, device="png")

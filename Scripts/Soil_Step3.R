@@ -45,6 +45,9 @@ writexl::write_xlsx(burrows_df, here("PRIMER/Imported Files", "burrowdistancemat
 # convert to a dist object with only the lower triangle of the matrix
 burrdist <- as.dist(burrows)
 
+hist(burrdist)
+min(burrdist)
+
 ###############################################################################################################
 ###################  Perform a mantel test using background and burrow samples ###############################
 
@@ -183,9 +186,14 @@ CAPplot_Class <- ggplot(CAPscores_class, aes(x=CAP1, y=CAP2)) + #sets up the plo
   scale_color_discrete_qualitative(palette = "Dark 3",labels=c("Background", "Occupied \nBurrow", "Unoccupied \nBurrow"), nmax=6, order = c(1,3,5)) +
   #scale_color_manual(values=colors30, labels=c("Background", "Occupied Burrow", "Unoccupied Burrow"))+
   #scale_fill_manual(values=alpha(colors30, 0.3), labels=c("Background", "Occupied Burrow", "Unoccupied Burrow"))+
-  theme(axis.title.x = element_text(size=12),axis.text.x  = element_blank(), axis.title.y = element_text( size=12), axis.text.y = element_blank(), axis.ticks=element_blank())+
+  theme(axis.title.x = element_text(size=12, family = "Arial"),
+        axis.text.x  = element_blank(), 
+        axis.title.y = element_text( size=12, family = "Arial"), 
+        axis.text.y = element_blank(), axis.ticks=element_blank())+
   #theme(legend.title=element_blank(), legend.text = element_text(size=10))+
-  theme(legend.position="bottom", legend.title=element_blank(), legend.text = element_text(size=11, margin= margin(l=1)), legend.key.spacing.x = unit(2, "pt"))+
+  theme(legend.position="bottom", 
+        legend.title= element_blank(), 
+        legend.text = element_text(size=11, margin= margin(l=1), family = "Arial"), legend.key.spacing.x = unit(2, "pt")) +
   theme(panel.border = element_rect(fill=NA, colour = "black", linewidth=1, linetype = "solid"), panel.background = element_rect(fill="white"))
 
 CAPplot_Class
@@ -198,21 +206,28 @@ CAPplot_Site <- ggplot(CAPscores_site, aes(x=CAP1, y=CAP2)) + #sets up the plot
   scale_color_discrete_qualitative(palette = "Dark 3", labels=c("Site 1", "Site 2", "Site 3"), nmax=6, order = c(2,4,6)) +
   #scale_color_manual(values=colors30, labels=c("Site 1", "Site 2", "Site 3"))+
   #scale_fill_manual(values=alpha(colors30, 0.3), labels=c("Site 1", "Site 2", "Site 3"))+
-  theme(axis.title.x = element_text(size=12),axis.text.x  = element_blank(), axis.title.y = element_text( size=12), axis.text.y = element_blank(), axis.ticks=element_blank())+
+  theme(axis.title.x = element_text(size=12, family = "Arial"),
+        axis.text.x  = element_blank(), 
+        axis.title.y = element_text(size=12, family = "Arial"), axis.text.y = element_blank(), axis.ticks=element_blank())+
   #theme(legend.title=element_blank(), legend.text = element_text(size=10))+
-  theme(legend.position="bottom", legend.title=element_blank(), legend.text = element_text(size=11, margin= margin(l=1)), legend.key.spacing.x = unit(2, "pt"))+
+  theme(legend.position="bottom", legend.title=element_blank(), 
+        legend.text = element_text(size=11, margin= margin(l=1), family = "Arial"), 
+        legend.key.spacing.x = unit(2, "pt"))+
   theme(panel.border = element_rect(fill=NA, colour = "black", linewidth=1, linetype = "solid"), panel.background = element_rect(fill="white"))
 
 CAPplot_Site
 
 # put two plots together
-CAPplot_Site + CAPplot_Class + plot_annotation(tag_levels="A") & theme(plot.tag = element_text(face = 'bold'))
+CAPplot_Site + CAPplot_Class + plot_annotation(tag_levels="A") & theme(plot.tag = element_text(face = 'bold', family = "Arial"))
 # this is Figure 2 in the corresponding manuscript
 
 # export plot
 ggsave(filename = here("Figures", "CAP_Site&Class.png"), 
        width=8, height=4.5, units="in", dpi=300, device="png")
 
+
+ggsave(filename = here("Figures", "Figure2.pdf"), 
+       width=8, height=4.5, units="in", dpi=300, device=cairo_pdf)
 
 ### Examine correlations between the CAP model axes and the compounds
 # this is another way to determine which compounds help differentiate sample types and colony sites
