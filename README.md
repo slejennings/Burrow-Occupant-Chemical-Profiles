@@ -11,9 +11,7 @@ Other contributors: Susan E. Ebeler, Gail L. Patricelli
 
 Dataset title: Data and code for the article "Bird-scented nests as a mechanism for olfactory homing in a burrow nesting seabird"
 
-Persistent Identifier: https://doi.org/10.5281/zenodo.16878922
-
-Date created: 03/28/2025
+Date originally created: 03/28/2025
 
 Dataset citation: Jennings, S.L., G.L. Patricelli, S.E. Ebeler. 2025. Data and code for "Bird-scented nests as a mechanism for olfactory homing in a burrow-nesting seabird". Zenodo. https://doi.org/10.5281/zenodo.16878922
 
