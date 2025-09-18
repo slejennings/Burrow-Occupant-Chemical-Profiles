@@ -165,3 +165,4 @@ length(unique(occupant$Band_Number)) # 22 birds with soil samples from their bur
 
 # export data frame for use in subsequent steps
 saveRDS(occupant, here("Outputs", "occupant.rds"))
+
